@@ -192,8 +192,8 @@ public class TestFrame extends JFrame implements ActionListener {
 						+ " could not be opened !!" ); 
 			} 
 			catch( NullPointerException ex) {
-				throw ex;
-				//listModel.addElement("NO Collection implemented");
+			throw ex;
+			//listModel.addElement("NO Collection implemented");
 			}
 		}
 	}

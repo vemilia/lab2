@@ -199,11 +199,10 @@ public class SplayWithGet<E extends Comparable<?
                     rotateLeftTwice(t.parent.parent);
                     t = t.parent.parent;
 
-                } else if (t.parent == t.parent.parent.right) {
-                        doubleRotateLeft(t.parent.parent);
-                        t = t.parent;
-                    }
-
+                } else if (t.parent == t.parent.parent.right){
+                    doubleRotateLeft(t.parent.parent);
+                    t = t.parent;
+                }
             } else if (t == t.parent.right){
                 if (t.parent.parent == null) {
                     rotateLeft(t.parent);
@@ -214,7 +213,7 @@ public class SplayWithGet<E extends Comparable<?
                     doubleRotateRight(t.parent.parent);
                     t = t.parent;
 
-                } else {
+                } else if (t.parent == t.parent.parent.right){
                     rotateRightTwice(t.parent.parent);
                     t = t.parent.parent;
                 }
